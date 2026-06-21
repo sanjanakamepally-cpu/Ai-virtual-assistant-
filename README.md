@@ -1,45 +1,66 @@
-import speech_recognition as sr
-import pyttsx3
-import datetime
-import webbrowser
+# AI Virtual Assistant
 
-engine = pyttsx3.init()
+A simple AI Virtual Assistant system that helps users interact with technology using voice or text commands to perform different tasks automatically.
 
-def speak(text):
-    engine.say(text)
-    engine.runAndWait()
+## Features
 
-def listen():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Listening...")
-        audio = r.listen(source)
+- Voice command support
+- Text-based interaction
+- Answer user questions
+- Open applications and websites
+- Perform task automation
 
-    try:
-        command = r.recognize_google(audio)
-        print("You said:", command)
-        return command.lower()
-    except:
-        speak("Sorry, I didn't understand.")
-        return ""
+## Objectives
 
-speak("Hello! I am your AI Virtual Assistant.")
+- Provide quick assistance
+- Improve user interaction
+- Save time through automation
+- Increase productivity
 
-while True:
-    command = listen()
+## Workflow
 
-    if "hello" in command:
-        speak("Hello! How can I help you?")
+User gives voice/text input
 
-    elif "time" in command:
-        current_time = datetime.datetime.now().strftime("%I:%M %p")
-        speak("The time is " + current_time)
+↓
 
-    elif "google" in command:
-        speak("Opening Google")
-        webbrowser.open("https://www.google.com")
+System processes the input
 
-    elif "exit" in command or "bye" in command:
-        speak("Goodbye!")
-        break
-k.sanjana
+↓
+
+AI understands the request
+
+↓
+
+Assistant performs the task
+
+↓
+
+Displays output to user
+
+## Modules
+
+- Speech Recognition
+- Text Processing
+- Command Execution
+- Response Generation
+- User Interface
+
+## Technology Used
+
+- Python
+- HTML
+- CSS
+- JavaScript
+- Machine Learning
+- GitHub
+
+## Future Enhancements
+
+- Multi-language support
+- Smart recommendations
+- Mobile application
+- Advanced AI features
+
+## Author
+
+k.Sanjana
